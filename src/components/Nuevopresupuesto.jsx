@@ -9,9 +9,8 @@ const Nuevopresupuesto = ({
   const [mensaje, setMensaje] = useState("");
 
   const handlePresupuesto = (e) => {
-    e.preventDefault();
-
-    if (!presupuesto || presupuesto < 0) {
+    if (!presupuesto || presupuesto <= 0) {
+      e.preventDefault();
       setMensaje("No es un presupuesto válido");
       return;
     }

@@ -38,8 +38,8 @@ const Modal = ({
   };
 
   const handleSubmit = (e) => {
-    //e.preventDefault();
     if ([nombre, cantidad, categoria].includes("")) {
+      e.preventDefault();
       setMensaje("Todos los campos son obligatorios.");
 
       setTimeout(() => {

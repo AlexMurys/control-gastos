@@ -121,6 +121,12 @@ header h1 {
   background-color: #042a67;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .formulario {
+    padding: 0 20px;
+    margin-top: 100px;
+  }
+}
 
 .formulario select {
   flex: 1;
@@ -180,11 +186,17 @@ header h1 {
   .dos-columnas :first-child {
     margin-bottom: 0;
   }
+  .formulario input[type="text"].nuevo-presupuesto,
+  .formulario input[type="number"].nuevo-presupuesto {
+    font-size: 2.8rem;
+    text-align: center;
+  }
 }
-.formulario input[type="text"].nuevo-presupuesto,
-.formulario input[type="number"].nuevo-presupuesto {
-  font-size: 2.8rem;
-  text-align: center;
+@media (max-width: 767px) {
+  .formulario input[type="text"].nuevo-presupuesto,
+  .formulario input[type="number"].nuevo-presupuesto {
+    font-size: 1.8rem;
+  }
 }
 
 .contenedor-presupuesto svg {
@@ -245,6 +257,11 @@ main {
   font-weight: 900;
   color: var(--gris-oscuro);
 }
+@media (max-width: 767px) {
+  .filtros label {
+    font-size: 2rem;
+  }
+}
 .filtros select {
   flex: 1;
   padding: 1rem;
@@ -252,6 +269,9 @@ main {
   border-radius: 1rem;
   text-align: center;
   background-color: var(--gris-claro);
+}
+
+@media (max-width: 767px) {
 }
 
 .listado-gastos {
@@ -347,14 +367,15 @@ main {
   top: 3rem;
   width: 3rem;
   height: 3rem;
+  z-index: 10;
 }
+
 .modal .cerrar-modal img {
   width: 100%;
 }
 
 .modal .formulario {
   max-width: 80rem;
-  width: 40rem;
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in;
